@@ -13,9 +13,12 @@ const navItems = <>
               <li><NavLink to='/menu' className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "active" : ""
   }>Menu</NavLink></li>
+              <li><NavLink to='/order' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : ""
+  }>Order</NavLink></li>
 </>
     return (
-        <div className="navbar max-w-screen-xl opacity-30 bg-black z-10 text-white fixed">
+        <div className="navbar max-w-screen-xl  bg-[#2b25256e] z-10 text-white fixed">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
