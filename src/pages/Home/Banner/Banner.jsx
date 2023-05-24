@@ -14,7 +14,6 @@ const Banner = () => {
         <div >
             <Carousel className=" text-center ">
              <div>
-             <div>
                     <img src={img1} />     
                 </div>
                 <div>
@@ -32,7 +31,6 @@ const Banner = () => {
                 <div>
                     <img src={img6} />
                 </div>
-             </div>
             </Carousel>
         </div>
     );
