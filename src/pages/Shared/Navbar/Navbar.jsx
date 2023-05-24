@@ -1,10 +1,18 @@
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
+// const navStyle ={
+//   color: 'green': ''
+// }
 
 const navItems = <>
-<li><a>Item 1</a></li>
-              <li><a>Item afgagas3</a></li>
+<li><NavLink to='/' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : ""
+  }>Home</NavLink></li>
+              <li><NavLink to='/menu' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : ""
+  }>Menu</NavLink></li>
 </>
     return (
         <div className="navbar max-w-screen-xl opacity-30 bg-black z-10 text-white fixed">

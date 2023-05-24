@@ -3,7 +3,7 @@ import featured from '../../../assets/home/featured.jpg'
 
 const Featured = () => {
     return (
-        <div className="text-white mt-10" style={{ backgroundImage:
+        <div className="text-white bg-fixed mt-10" style={{ backgroundImage:
            `linear-gradient(to bottom, rgba(21, 21, 21, 0.6),rgba(21, 21, 21, 0.6)),
             url('${featured}')` }} >
             <SectionTitle
@@ -18,7 +18,7 @@ const Featured = () => {
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate facere, deserunt dolores maiores quod nobis quas quasi. Eaque repellat recusandae ad laudantium tempore consequatur consequuntur omnis ullam maxime tenetur.
                     </p>
-                    <button className="btn btn-outline mt-10 ">Read More</button>
+                    <button className="btn btn-outline mt-10  border-b-2">Read More</button>
                 </div>
             </div>
         </div>
