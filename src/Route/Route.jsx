@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
           element:<PageMenu></PageMenu>
         },
         {
-          path:'/order',
+          path:'/order:category',
           element:<OrderPage></OrderPage>
         }
       ]

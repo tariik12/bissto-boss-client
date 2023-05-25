@@ -7,7 +7,7 @@ import salad from '../../assets/menu/salad-bg.jpg'
 import soup from '../../assets/menu/soup-bg.jpg'
 import { UseMenu } from "../../Hooks/UseMenu";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
-import MenuItems from "../Shared/Menu/MenuItems";
+import MenuCategory from "./MenuCategory/MenuCategory";
 
 
 
@@ -27,58 +27,16 @@ const PageMenu = () => {
             </Helmet>
             {/* offered */}
              <Cover img={img} title={'OUR MENU'} subTitle={'Would You like to Try a Dish ?'}></Cover>
+             {/* main cover */}
              <SectionTitle title={'Todays offer'} subTitle={'Do not miss'}></SectionTitle>
-             <div className="grid grid-cols-2">
-             {
-                offeredItems.map((items,index) =><MenuItems key={index}items={items}></MenuItems>)
-             }
-             </div>
-             <div className=" text-center my-5">
-             <button className="btn  btn-outline">ORDER YOUR FAVOURITE FOOD</button>
-             </div>
-             {/* dessert */}
-             <Cover img={dessert} title={'dessert'} subTitle={'Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'}></Cover>
-
-             <div className="grid grid-cols-2">
-             {
-                dessertItems.map((items,index) =><MenuItems key={index}items={items}></MenuItems>)
-             }
-             </div>
-              <div className=" text-center my-5">
-             <button className="btn  btn-outline">ORDER YOUR FAVOURITE FOOD</button>
-             </div>
-             {/* pizza */}
-             <Cover img={pizza} title={'pizza'} subTitle={'Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'}></Cover>
-             <div className="grid grid-cols-2">
-             {
-               pizzaItems.map((items,index) =><MenuItems key={index}items={items}></MenuItems>)
-             }
-             </div>
-              <div className=" text-center my-5">
-             <button className="btn  btn-outline">ORDER YOUR FAVOURITE FOOD</button>
-             </div>
-
-             {/* soupItems */}
-             <Cover img={salad} title={'salad'}  subTitle={'Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'}></Cover>
-             <div className="grid grid-cols-2">
-             {
-                saladItems.map((items,index) =><MenuItems key={index}items={items}></MenuItems>)
-             }
-             </div>
-             <div className=" text-center my-5">
-             <button className="btn  btn-outline">ORDER YOUR FAVOURITE FOOD</button>
-             </div>
-
-             {/* saladItems */}
-             <Cover img={soup} title={'soup'}  subTitle={'Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'}></Cover>
-             <div className="grid grid-cols-2">
-             {
-                soupItems.map((items,index) =><MenuItems key={index}items={items}></MenuItems>)
-             }
-             </div>
-             <div className=" text-center my-5">
-             <button className="btn  btn-outline">ORDER YOUR FAVOURITE FOOD</button>
-             </div>
+             {/* offered menu items */}
+             <MenuCategory items={offeredItems}></MenuCategory>
+             {/* dessert menu items */}
+            
+            <MenuCategory items={dessertItems} title={'Dessert'} img={dessert}> </MenuCategory>
+            <MenuCategory items={saladItems} title={'salad'} img={salad}> </MenuCategory>
+            <MenuCategory items={pizzaItems} title={'pizza'} img={pizza}> </MenuCategory>
+            <MenuCategory items={soupItems} title={'soup'} img={soup}> </MenuCategory>
         </div>
 
         

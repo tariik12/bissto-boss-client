@@ -13,7 +13,7 @@ const navItems = <>
               <li><NavLink to='/menu' className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "active" : ""
   }>Menu</NavLink></li>
-              <li><NavLink to='/order' className={({ isActive, isPending }) =>
+              <li><NavLink to='/order/salad' className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "active" : ""
   }>Order</NavLink></li>
 </>
