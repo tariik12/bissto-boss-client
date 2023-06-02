@@ -9,14 +9,14 @@ import Testimonial from "./Testomonial/Testimonial";
 const Home = () => {
     return (
         <div>
-             <Helmet>
-        <title>Bisto Boos | Home</title>
-      </Helmet>
-           <Banner></Banner>
-           <Category></Category>
-           <PopularItems></PopularItems>
-           <Featured></Featured>
-           <Testimonial></Testimonial>
+            <Helmet>
+                <title>Bisto Boos | Home</title>
+            </Helmet>
+            <Banner></Banner>
+            <Category></Category>
+            <PopularItems></PopularItems>
+            <Featured></Featured>
+            <Testimonial></Testimonial>
         </div>
     );
 };

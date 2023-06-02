@@ -1,10 +1,17 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-
+import { AuthContext } from "../../../Provider/AuthProvider";
+import useCard from "../../../Hooks/useCard";
 const Navbar = () => {
+const [cart] = useCard()
 
-  // const navStyle ={
-  //   color: 'green': ''
-  // }
+  const {user,logOut} = useContext(AuthContext)
+
+  const handleLogout = () =>{
+    logOut()
+    .then(() =>{})
+    .catch(error =>console.log(error.code))
+  }
 
   const navItems = <>
     <li><NavLink to='/' className={({ isActive, isPending }) =>
@@ -13,16 +20,32 @@ const Navbar = () => {
     <li><NavLink to='/menu' className={({ isActive, isPending }) =>
       isPending ? "pending" : isActive ? "active" : ""
     }>Menu</NavLink></li>
-    <li><NavLink to='/order/salad' className={({ isActive, isPending }) =>
+    <li><NavLink  to='/secret' className={({ isActive, isPending }) =>
       isPending ? "pending" : isActive ? "active" : ""
-    }>Order</NavLink></li>
-    <li><NavLink to='/login' className={({ isActive, isPending }) =>
+    }>Secret</NavLink></li>
+    <li><NavLink  to='/dashboard/myCard' className={({ isActive, isPending }) =>
       isPending ? "pending" : isActive ? "active" : ""
-    }>Login</NavLink></li>
-    <li><NavLink to='/register' className={({ isActive, isPending }) =>
+    }><button className="btn gap-2">
+      Shop
+    <div className="badge badge-secondary">+{cart?.length || 0}</div>
+  </button></NavLink></li>
+    {user ? <><li><NavLink onClick={handleLogout
+    } to='/login' className={({ isActive, isPending }) =>
       isPending ? "pending" : isActive ? "active" : ""
-    }>Register</NavLink></li>
-  </>
+    }>Logout</NavLink></li>
+    </>:
+    <><li><NavLink to='/login' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : ""
+  }>Login</NavLink></li>
+  <li><NavLink to='/register' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : ""
+  }>Register</NavLink></li>
+  </>}
+  <li><NavLink to='/order/salad' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : ""
+  }>Order</NavLink></li>
+</>
+    
   return (
     <div className="navbar max-w-screen-xl  bg-[#2b25256e] z-10 text-white fixed">
       <div className="navbar-start">

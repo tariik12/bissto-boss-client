@@ -9,6 +9,10 @@ import PageMenu from "../pages/PageMenu/PageMenu";
 import OrderPage from "../Order/OrderPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import Secret from "../pages/Shared/Secret/Secret";
+import PrivateRoute from "./PrivateRoute";
+import DashBoard from "../Layout/DashBoard";
+import MyCard from "../pages/DashBoard/MyCard/MyCard";
 
 
 export const router = createBrowserRouter([
@@ -25,7 +29,7 @@ export const router = createBrowserRouter([
           element:<PageMenu></PageMenu>
         },
         {
-          path:'/order:category',
+          path:'/order/:category',
           element:<OrderPage></OrderPage>
         },
         {
@@ -35,9 +39,23 @@ export const router = createBrowserRouter([
         {
           path:'/register',
           element:<Register></Register>
+        },
+        {
+          path:'/secret',
+          element:<PrivateRoute><Secret></Secret></PrivateRoute>
         }
       ]
     }
-   
+   ,
+   {
+    path:'dashboard',
+    element:<PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
+    children:[
+      {
+        path:'myCard',
+        element:<MyCard></MyCard>
+      }
+    ]
+   }
  
   ]);

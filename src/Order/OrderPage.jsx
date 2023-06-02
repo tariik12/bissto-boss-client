@@ -14,7 +14,7 @@ const OrderPage = () => {
     const initialIndex = categories.indexOf(category)
     const [tabIndex, setTabIndex] = useState(initialIndex)
     const [menu] = UseMenu()
-    console.log(category)
+
 
     const dessertItems = menu.filter(items =>items.category ==='dessert')
     const drinksItems = menu.filter(items =>items.category ==='drinks')

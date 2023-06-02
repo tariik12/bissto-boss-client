@@ -33,7 +33,7 @@ const PageMenu = () => {
              <MenuCategory items={offeredItems}></MenuCategory>
              {/* dessert menu items */}
             
-            <MenuCategory items={dessertItems} title={'Dessert'} img={dessert}> </MenuCategory>
+            <MenuCategory items={dessertItems} title={'dessert'} img={dessert}> </MenuCategory>
             <MenuCategory items={saladItems} title={'salad'} img={salad}> </MenuCategory>
             <MenuCategory items={pizzaItems} title={'pizza'} img={pizza}> </MenuCategory>
             <MenuCategory items={soupItems} title={'soup'} img={soup}> </MenuCategory>
