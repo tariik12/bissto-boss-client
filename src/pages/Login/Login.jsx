@@ -5,6 +5,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2'
 import 'sweetalert2/dist/sweetalert2.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
 
@@ -93,6 +94,7 @@ const Login = () => {
           <input disabled={false}  type="submit"className="btn btn-primary" value='login' name="" id="" />
         </div>
       </form>
+      <SocialLogin></SocialLogin>
     </div>
   </div>
 </div>

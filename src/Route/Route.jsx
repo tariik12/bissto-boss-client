@@ -13,6 +13,7 @@ import Secret from "../pages/Shared/Secret/Secret";
 import PrivateRoute from "./PrivateRoute";
 import DashBoard from "../Layout/DashBoard";
 import MyCard from "../pages/DashBoard/MyCard/MyCard";
+import AllUsers from "../pages/DashBoard/AllUsers/AllUsers";
 
 
 export const router = createBrowserRouter([
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
       {
         path:'myCard',
         element:<MyCard></MyCard>
+      },
+      {
+        path:'allUsers',
+        element:<AllUsers></AllUsers>
       }
     ]
    }
